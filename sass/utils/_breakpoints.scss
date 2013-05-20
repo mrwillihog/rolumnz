@@ -1,0 +1,57 @@
+$breakpoint1: 'only screen and (max-width:399px)';
+$breakpoint2: 'only screen and (min-width:400px) and (max-width:599px)';
+$breakpoint3: 'only screen and (min-width:600px) and (max-width:1007px)';
+$breakpoint4: 'only screen and (min-width:1008px)';
+
+$breakpoint2-gte: 'only screen and (min-width:400px)';
+$breakpoint3-gte: 'only screen and (min-width:600px)';
+
+@mixin bp($breakpoint) {
+    @if $breakpoint == 1 and not $ie {
+        @media #{$breakpoint1} { @content }
+    }
+
+    @if $breakpoint == 2 and not $ie {
+        @media #{$breakpoint2} { @content }
+    }
+
+    @if $breakpoint == 3 and not $ie {
+        @media #{$breakpoint3} { @content }
+    }
+
+    @if $breakpoint == 4 {
+        @if not $ie {
+            @media #{$breakpoint4} { @content }
+        }
+        @else {
+            @content
+        }
+    }
+}
+
+@mixin bp-gte($breakpoint) {
+
+    @if $breakpoint == 2 {
+        @if not $ie {
+            @media #{$breakpoint2-gte} { @content }
+        }
+        @else {
+            @content
+        }
+    }
+
+    @if $breakpoint == 3 {
+        @if not $ie {
+            @media #{$breakpoint3-gte} { @content }
+        }
+        @else {
+            @content
+        }
+    }
+}
+
+@mixin shown-from-breakpoint-3 {
+    display: none;
+    @include bp-gte(2) { display: block; }
+}
+
