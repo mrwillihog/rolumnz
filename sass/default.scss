@@ -9,17 +9,20 @@ body {
     color: #666;
 }
 
-h1 {
-    margin: 0;
-    height: 157px;
-    line-height: 130px;
-    font-size: 5em;
-    background: #666;
-    color: white;
-    padding-left: $grid-gutter-width;
-    margin: -$grid-gutter-width;
-    margin-bottom: $grid-wide-gutter-width;
+.header {
+    h1 {
+        margin: 0;
+        height: 157px;
+        line-height: 130px;
+        font-size: 5em;
+        background: #666;
+        color: white;
+        padding-left: $grid-gutter-width;
+        margin: -$grid-gutter-width;
+        margin-bottom: $grid-wide-gutter-width;
+    }
 }
+
 
 .main {
     overflow: hidden;
@@ -45,7 +48,11 @@ h1 {
     }
 }
 
+.stats {
+}
+
 .grid-container {
+    clear: left;
     @include grid-container;
 
     @include bp(4) {
