@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>GridZ</title>
@@ -135,5 +136,37 @@
                 </div>
             </div>
         </div>
+        <div class="info">
+            <ul>
+            </ul>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script>
+
+            function displayListInformation() {
+                var $list = $('.info ul').empty();
+                $('.grid-item').each(function (i) {
+                    var index = i + 1,
+                        string = "Item " + index,
+                        $li = $("<li/>");
+
+                    if ($(this).is(':visible')) {
+                        string += ": Visible";
+                    } else {
+                        $li.addClass('highlight');
+                        string += ": Hidden";
+                    }
+
+                    $li.text(string).appendTo($list);
+                });
+            };
+
+
+            $(window).on('resize', function () {
+                displayListInformation();
+            });
+
+            displayListInformation();
+        </script>
 	</body>
 </html>

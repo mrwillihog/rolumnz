@@ -23,6 +23,21 @@ h1 {
     }
 }
 
+.info {
+    ul {
+        list-style: none;
+        margin-top: 20px;
+        padding: 0;
+        li {
+            margin: 0;
+            padding: 0;
+            &.highlight {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 .grid-container {
     @include grid-container;
 
