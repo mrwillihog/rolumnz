@@ -55,13 +55,22 @@ h1 {
     margin-bottom: 16px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000341}}
+.grid-item.popular .content {
+  line-height: 500px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000342}}
+.grid-item.popular .content a {
+  height: 516px;
+  background: #66DD66;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000349}}
 .grid-item .content {
   font-size: 4em;
   line-height: 250px;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000350}}
 .grid-item .content a {
   height: 250px;
   background: #BBB;
@@ -74,13 +83,13 @@ h1 {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000363}}
 .grid-item .content a:hover, .grid-item .content a:focus, .grid-item .content a:active {
   background: #EEBBEE;
   color: #da69da;
 }
 @media only screen and (max-width: 599px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000374}}
   .grid-item:nth-child(2n+1) {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -93,7 +102,7 @@ h1 {
     float: left;
     clear: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000375}}
   .grid-item:nth-child(2n+2) {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -105,21 +114,43 @@ h1 {
     margin-right: -100.0%;
     float: left;
   }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000376}}
+  .grid-item.popular {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    padding: 0 4px;
+    width: 100.0%;
+    margin-left: 0.0%;
+    margin-right: -100.0%;
+    float: left;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000379}}
+  .grid-item.item-8 {
+    display: none;
+  }
 }
 @media only screen and (max-width: 599px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000374}}
   .grid-item:nth-child(2n+1) {
     padding: 0 8px;
   }
 }
 @media only screen and (max-width: 599px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000375}}
   .grid-item:nth-child(2n+2) {
     padding: 0 8px;
   }
 }
+@media only screen and (max-width: 599px) and (min-width: 400px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000376}}
+  .grid-item.popular {
+    padding: 0 8px;
+  }
+}
 @media only screen and (min-width: 600px) and (max-width: 1007px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000385}}
   .grid-item:nth-child(3n+1) {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -132,7 +163,7 @@ h1 {
     float: left;
     clear: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000386}}
   .grid-item:nth-child(3n+2) {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -144,7 +175,7 @@ h1 {
     margin-right: -66.66666%;
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000387}}
   .grid-item:nth-child(3n+3) {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -156,22 +187,44 @@ h1 {
     margin-right: -100.0%;
     float: left;
   }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000389}}
+  .grid-item.popular {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    padding: 0 4px;
+    width: 100.0%;
+    margin-left: 0.0%;
+    margin-right: -100.0%;
+    float: left;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000392}}
+  .grid-item.item-8, .grid-item.item-9 {
+    display: none;
+  }
 }
 @media only screen and (min-width: 600px) and (max-width: 1007px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000385}}
   .grid-item:nth-child(3n+1) {
     padding: 0 8px;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1007px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000386}}
   .grid-item:nth-child(3n+2) {
     padding: 0 8px;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1007px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000387}}
   .grid-item:nth-child(3n+3) {
+    padding: 0 8px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1007px) and (min-width: 400px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000389}}
+  .grid-item.popular {
     padding: 0 8px;
   }
 }
@@ -182,10 +235,14 @@ h1 {
     width: 232px;
     margin-right: 16px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\00003102}}
   .grid-item.bottom {
     position: relative;
     margin-left: -248px;
     top: 266px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/gridz\/sass\/default\.scss}line{font-family:\00003108}}
+  .grid-item.item-8 {
+    display: none;
   }
 }
