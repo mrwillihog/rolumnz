@@ -6,6 +6,10 @@ $breakpoint4: 'only screen and (min-width:1008px)';
 $breakpoint2-gte: 'only screen and (min-width:400px)';
 $breakpoint3-gte: 'only screen and (min-width:600px)';
 
+$breakpoint1-lte: 'only screen and (max-width:399px)';
+$breakpoint2-lte: 'only screen and (max-width:599px)';
+$breakpoint3-lte: 'only screen and (min-width:1007px)';
+
 @mixin bp($breakpoint) {
     @if $breakpoint == 1 and not $ie {
         @media #{$breakpoint1} { @content }
@@ -46,6 +50,26 @@ $breakpoint3-gte: 'only screen and (min-width:600px)';
         }
         @else {
             @content
+        }
+    }
+}
+
+@mixin bp-lte($breakpoint) {
+    @if $breakpoint == 1 {
+        @if not $ie {
+            @media #{$breakpoint1-lte} { @content; }
+        }
+    }
+
+    @if $breakpoint == 2 {
+        @if not $ie {
+            @media #{$breakpoint2-lte} { @content; }
+        }
+    }
+
+    @if $breakpoint == 3 {
+        @if not $ie {
+            @media #{$breakpoint3-lte} { @content; }
         }
     }
 }
