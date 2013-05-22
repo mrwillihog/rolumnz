@@ -48,24 +48,41 @@ function buildCollectionItem(rolumn) {
     return $container;
 }
 
-var $grid = $('.grid-container'),
+function redraw() {
+    var $grid = $('.grid-container'),
     popularRolumn = 1,
-    curatedRolumn = 2,
-    dupes = [];
+    curatedRolumn = $('#curated-rolumn').val(),
+    dupes = [],
+    startItem = curatedRolumn * 2 - 1;
 
-$grid.append(buildCollectionItem());
+    $grid.empty();
 
-for (var i = 1; i <= 18; i++) {
-    if (i === 5) {
-        $grid.append(buildFeaturedItem(i, 'before-duplicate'));
-        $grid.append(buildFeaturedItem(i+1, 'before-duplicate'));
-        dupes.push(i);
-        dupes.push(i+1);
+    for (var i = 1; i <= 18; i++) {
+        if (i === startItem) {
+            if (startItem % 3 !== 1) {
+                $grid.append(buildFeaturedItem(i, 'before-duplicate'));
+                dupes.push(i);
+            }
+
+            if (startItem % 3 === 2) {
+                $grid.append(buildFeaturedItem(i+1, 'before-duplicate'));
+                dupes.push(i+1);
+            }
+
+            $grid.append(buildCollectionItem());
+        }
+
+        if (dupes.indexOf(i) === -1) {
+            $grid.append(buildFeaturedItem(i));
+        } else {
+            $grid.append(buildFeaturedItem(i, 'after-duplicate'));
+        }
+    }
+
+    if (curatedRolumn == 10) {
         $grid.append(buildCollectionItem());
     }
-    if (dupes.indexOf(i) === -1) {
-        $grid.append(buildFeaturedItem(i));
-    } else {
-        $grid.append(buildFeaturedItem(i, 'after-duplicate'));
-    }
 }
+
+redraw();
+$('#curated-rolumn').on('change', redraw);

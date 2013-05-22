@@ -5,7 +5,7 @@ $gel-padding: 4px;
 $item-height: 250px;
 $item-width: 232px;
 
-$rolumns: 12;
+$rolumns: 11;
 
 body {
     font-family: 'Helvetica Neue'; // Alllllllllllll right!
@@ -24,6 +24,11 @@ body {
         margin: -$grid-gutter-width;
         margin-bottom: $grid-wide-gutter-width;
     }
+}
+
+input {
+    padding: 4px 8px;
+    margin-bottom: 20px;
 }
 
 
