@@ -106,18 +106,10 @@ function redraw() {
 
     for (var i = 0; i < objects.length; i++) {
         if (objects[i].type == "single" ) {
-            if (objects[i+1] && objects[i+1].type == "double") {
-                $grid.append(buildFeaturedItem(itemNumber, 'before-duplicate'));
-            } else {
-                $grid.append(buildFeaturedItem(itemNumber));
-            }
+            $grid.append(buildFeaturedItem(itemNumber));
             itemNumber += 1;
         } else {
             $grid.append(buildCollectionItem(objects[i]['class']));
-            if (objects[i-1] && objects[i-1].type == "single") {
-                // No need to duplicate
-                $grid.append(buildFeaturedItem(itemNumber, 'after-duplicate'));
-            }
         }
     }
 }
