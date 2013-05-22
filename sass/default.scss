@@ -3,6 +3,9 @@ $ie: false;
 $gel-padding: 4px;
 
 $item-height: 250px;
+$item-width: 232px;
+
+$rolumns: 12;
 
 body {
     font-family: 'Helvetica Neue'; // Alllllllllllll right!
@@ -33,30 +36,12 @@ body {
     }
 }
 
-.info {
-    ul {
-        list-style: none;
-        margin-top: 20px;
-        padding: 0;
-        li {
-            margin: 0;
-            padding: 0;
-            &.highlight {
-                font-weight: bold;
-            }
-        }
-    }
-}
-
-.stats {
-}
-
 .grid-container {
     clear: left;
     @include grid-container;
 
     @include bp(4) {
-        width: 2232px;
+        width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
         height: $item-height * 2 + $grid-wide-gutter-width * 2;
     }
 }
@@ -66,31 +51,21 @@ body {
     @include bp-gte(2) {
         margin-bottom: $grid-wide-gutter-width;
     }
-    &.popular, &.curated {
+    &.double {
+        clear: left;
+        @include bp(4) {
+            clear: none;
+        }
         .content {
             a {
                 height: 2*$item-height + $grid-wide-gutter-width;
+                background: #66DD66;
+                color: darken(#66DD66, 20%);
             }
             line-height: $item-height * 2;
         }
     }
 
-    &.popular {
-        .content {
-            a {
-                background: #66DD66;
-                color: darken(#66DD66, 20%);
-            }
-        }
-    }
-    &.curated {
-        .content {
-            a {
-                background: #6666DD;
-                color: darken(#6666DD, 20%);
-            }
-        }
-    }
     .content {
         a {
             height: $item-height;
@@ -116,49 +91,203 @@ body {
         text-align: center;
     }
 
-    @include bp-lte(2) {
-        &:nth-child(2n+1) {@include grid-item-12-1; clear: left;}
-        &:nth-child(2n+2) {@include grid-item-12-13;}
-        &.popular, &.curated {
-            @include grid-item-24-1;
-        }
-        &.item-8 {
-            display: none;
-        }
-        &.item-14 {
-            display: none;
-        }
+
+}
+
+@include bp-lte(2) {
+    .odd {
+        clear: left;
+        @include grid-item-12-1;
     }
 
-    @include bp(3) {
-        &:nth-child(3n+1) {@include grid-item-8-1; clear: left;}
-        &:nth-child(3n+2) {@include grid-item-8-9;}
-        &:nth-child(3n+3) {@include grid-item-8-17;}
-
-        &.popular, &.curated {
-            @include grid-item-24-1;
-        }
-        &.item-8, &.item-9, &.item-14, &.item-15 {
-            display: none;
-        }
+    .even {
+        @include grid-item-12-13;
     }
 
-    @include bp(4) {
+    .before-duplicate {
+        display: none;
+    }
+}
+
+@include bp(3) {
+    .left {
+        @include grid-item-8-1;
+        clear: left;
+    }
+
+    .middle {
+        @include grid-item-8-9;
+    }
+
+    .right {
+        @include grid-item-8-17;
+    }
+
+    .after-duplicate {
+        display: none;
+    }
+}
+
+@include bp(4) {
+    .grid-item {
         float: left;
         width: 232px;
         margin-right: $gel-padding * 4;
 
-        &.bottom {
+        &.even {
             position: relative;
             margin-left: -232px - $gel-padding * 4;
             top: $item-height + $grid-wide-gutter-width;
         }
+    }
 
-        &.item-8 {
-            display: none;
-        }
-        &.item-14 {
-            display: none;
-        }
+    .before-duplicate {
+        display: none;
     }
 }
+
+// .item-1 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         clear: none;
+//         @include grid-item-8-1;
+//     }
+// }
+// .item-2 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         @include grid-item-8-9;
+//     }
+// }
+// .item-3 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         clear: none;
+//         @include grid-item-8-17;
+//     }
+// }
+// .item-4 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         clear: left;
+//         @include grid-item-8-1;
+//     }
+// }
+// .item-5 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         clear: none;
+//         @include grid-item-8-9;
+//     }
+// }
+// .item-6 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         @include grid-item-8-17;
+//     }
+// }
+// .item-7 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         @include grid-item-8-1;
+//     }
+// }
+// .item-8 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         @include grid-item-8-9;
+//     }
+// }
+// .item-9 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         clear: none;
+//         @include grid-item-8-17;
+//     }
+// }
+// .item-10 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         clear: left;
+//         @include grid-item-8-1;
+//     }
+// }
+// .item-11 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         clear: none;
+//         @include grid-item-8-9;
+//     }
+// }
+// .item-12 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         @include grid-item-8-17;
+//     }
+// }
+// .item-13 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         @include grid-item-8-1;
+//     }
+// }
+// .item-14 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         @include grid-item-8-9;
+//     }
+// }
+// .item-15 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         clear: none;
+//         @include grid-item-8-17;
+//     }
+// }
+// .item-16 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         @include grid-item-8-1;
+//         clear: left;
+//     }
+// }
+// .item-17 {
+//     @include grid-item-12-1;
+//     clear: left;
+
+//     @include bp(3) {
+//         clear: none;
+//         @include grid-item-8-9;
+//     }
+// }
+// .item-18 {
+//     @include grid-item-12-13;
+
+//     @include bp(3) {
+//         @include grid-item-8-17;
+//     }
+// }
