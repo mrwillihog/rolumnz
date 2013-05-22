@@ -84,6 +84,11 @@ function buildObjectArray() {
         };
         if (popularIndex - 1 == i || curatedIndex - 1 == i) {
             objects[i].type = "double";
+            if (popularIndex - 1 == i) {
+                objects[i]['class'] = "popular";
+            } else {
+                objects[i]['class'] = "curated";
+            }
             numFeaturedItems += 1;
         }
     }
@@ -108,7 +113,7 @@ function redraw() {
             }
             itemNumber += 1;
         } else {
-            $grid.append(buildCollectionItem("popular"));
+            $grid.append(buildCollectionItem(objects[i]['class']));
             if (objects[i-1] && objects[i-1].type == "single") {
                 // No need to duplicate
                 $grid.append(buildFeaturedItem(itemNumber, 'after-duplicate'));
