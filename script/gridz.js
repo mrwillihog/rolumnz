@@ -57,19 +57,32 @@ function buildCollectionItem(groupClass) {
 
 function buildObjectArray() {
     var objects = [],
-        popular = $('#popular-rolumn').val(),
-        curated = $('#curated-rolumn').val(),
-        numFeaturedItems = 18;
+        popular = +$('#popular-rolumn').val(),
+        curated = +$('#curated-rolumn').val(),
+        numFeaturedItems = 18,
+        popularIndex,
+        curatedIndex;
 
     if (curated == popular) {
         curated += 1;
     }
 
+    popularIndex = popular * 2 - 1;
+    curatedIndex = curated * 2 - 1;
+
+    if (popularIndex < curatedIndex) {
+        curatedIndex -= 1;
+    } else {
+        popularIndex += 2;
+    }
+
+    console.log(popularIndex, curatedIndex);
+
     for (var i = 0; i < numFeaturedItems; i++) {
         objects[i] = {
             type: "single"
         };
-        if (popular - 1 == i || curated - 1 == i) {
+        if (popularIndex - 1 == i || curatedIndex - 1 == i) {
             objects[i].type = "double";
             numFeaturedItems += 1;
         }

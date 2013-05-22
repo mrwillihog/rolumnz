@@ -120,7 +120,7 @@ input {
         @include grid-item-12-13;
     }
 
-    .before-duplicate {
+    .after-duplicate {
         display: none;
     }
 }
@@ -139,7 +139,7 @@ input {
         @include grid-item-8-17;
     }
 
-    .after-duplicate {
+    .before-duplicate {
         display: none;
     }
 }
@@ -157,153 +157,7 @@ input {
         }
     }
 
-    .before-duplicate {
+    .after-duplicate {
         display: none;
     }
 }
-
-// .item-1 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         clear: none;
-//         @include grid-item-8-1;
-//     }
-// }
-// .item-2 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         @include grid-item-8-9;
-//     }
-// }
-// .item-3 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         clear: none;
-//         @include grid-item-8-17;
-//     }
-// }
-// .item-4 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         clear: left;
-//         @include grid-item-8-1;
-//     }
-// }
-// .item-5 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         clear: none;
-//         @include grid-item-8-9;
-//     }
-// }
-// .item-6 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         @include grid-item-8-17;
-//     }
-// }
-// .item-7 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         @include grid-item-8-1;
-//     }
-// }
-// .item-8 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         @include grid-item-8-9;
-//     }
-// }
-// .item-9 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         clear: none;
-//         @include grid-item-8-17;
-//     }
-// }
-// .item-10 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         clear: left;
-//         @include grid-item-8-1;
-//     }
-// }
-// .item-11 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         clear: none;
-//         @include grid-item-8-9;
-//     }
-// }
-// .item-12 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         @include grid-item-8-17;
-//     }
-// }
-// .item-13 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         @include grid-item-8-1;
-//     }
-// }
-// .item-14 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         @include grid-item-8-9;
-//     }
-// }
-// .item-15 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         clear: none;
-//         @include grid-item-8-17;
-//     }
-// }
-// .item-16 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         @include grid-item-8-1;
-//         clear: left;
-//     }
-// }
-// .item-17 {
-//     @include grid-item-12-1;
-//     clear: left;
-
-//     @include bp(3) {
-//         clear: none;
-//         @include grid-item-8-9;
-//     }
-// }
-// .item-18 {
-//     @include grid-item-12-13;
-
-//     @include bp(3) {
-//         @include grid-item-8-17;
-//     }
-// }
