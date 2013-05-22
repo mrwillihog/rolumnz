@@ -5,7 +5,7 @@ $gel-padding: 4px;
 $item-height: 250px;
 $item-width: 232px;
 
-$rolumns: 11;
+$rolumns: 12;
 
 body {
     font-family: 'Helvetica Neue'; // Alllllllllllll right!
@@ -67,7 +67,18 @@ input {
                 background: #66DD66;
                 color: darken(#66DD66, 20%);
             }
+
             line-height: $item-height * 2;
+        }
+
+    }
+
+    &.popular {
+        .content {
+            a {
+                background: #6666DD;
+                color: darken(#6666DD, 20%);
+            }
         }
     }
 

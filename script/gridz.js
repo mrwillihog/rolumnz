@@ -33,56 +33,78 @@ function buildFeaturedItem(number, dupeClass) {
     return $container;
 }
 
-function buildCollectionItem(rolumn) {
+function buildCollectionItem(groupClass) {
     var $container = $('<div/>', {
             'class': 'grid-item double'
         }),
         $content = $('<div/>', {
             'class': 'content'
-        }).appendTo($container);
+        }).appendTo($container),
+        text = "C";
+
+    $container.addClass(groupClass);
+
+    if (groupClass == "popular") {
+        text = "P";
+    }
 
     $('<a/>', {
         href: '#'
-    }).text('C').appendTo($content);
+    }).text(text).appendTo($content);
 
     return $container;
 }
 
+function buildObjectArray() {
+    var objects = [],
+        popular = $('#popular-rolumn').val(),
+        curated = $('#curated-rolumn').val(),
+        numFeaturedItems = 18;
+
+    if (curated == popular) {
+        curated += 1;
+    }
+
+    for (var i = 0; i < numFeaturedItems; i++) {
+        objects[i] = {
+            type: "single"
+        };
+        if (popular - 1 == i || curated - 1 == i) {
+            objects[i].type = "double";
+            numFeaturedItems += 1;
+        }
+    }
+    return objects;
+}
+
 function redraw() {
     var $grid = $('.grid-container'),
-    popularRolumn = 1,
-    curatedRolumn = $('#curated-rolumn').val(),
-    dupes = [],
-    startItem = curatedRolumn * 2 - 1;
+        objects = buildObjectArray(),
+        itemNumber = 1;
 
     $grid.empty();
 
-    for (var i = 1; i <= 18; i++) {
-        if (i === startItem) {
-            if (startItem % 3 !== 1) {
-                $grid.append(buildFeaturedItem(i, 'before-duplicate'));
-                dupes.push(i);
+    console.log(objects);
+
+    for (var i = 0; i < objects.length; i++) {
+        if (objects[i].type == "single" ) {
+            if (objects[i+1] && objects[i+1].type == "double") {
+                $grid.append(buildFeaturedItem(itemNumber, 'before-duplicate'));
+            } else {
+                $grid.append(buildFeaturedItem(itemNumber));
             }
-
-            if (startItem % 3 === 2) {
-                $grid.append(buildFeaturedItem(i+1, 'before-duplicate'));
-                dupes.push(i+1);
-            }
-
-            $grid.append(buildCollectionItem());
-        }
-
-        if (dupes.indexOf(i) === -1) {
-            $grid.append(buildFeaturedItem(i));
+            itemNumber += 1;
         } else {
-            $grid.append(buildFeaturedItem(i, 'after-duplicate'));
+            $grid.append(buildCollectionItem("popular"));
+            if (objects[i-1] && objects[i-1].type == "single") {
+                // No need to duplicate
+                $grid.append(buildFeaturedItem(itemNumber, 'after-duplicate'));
+            }
         }
-    }
-
-    if (curatedRolumn == 10) {
-        $grid.append(buildCollectionItem());
     }
 }
 
 redraw();
+
 $('#curated-rolumn').on('change', redraw);
+$('#popular-rolumn').on('change', redraw);
