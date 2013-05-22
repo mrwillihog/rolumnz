@@ -73,7 +73,7 @@ function buildObjectArray() {
     if (popularIndex < curatedIndex) {
         curatedIndex -= 1;
     } else {
-        popularIndex += 2;
+        popularIndex -= 1;
     }
 
     console.log(popularIndex, curatedIndex);

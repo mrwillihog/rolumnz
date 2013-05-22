@@ -63,12 +63,15 @@ input {
         }
         .content {
             a {
-                height: 2*$item-height + $grid-wide-gutter-width;
+                @include bp(4) {
+                    height: 2*$item-height + $grid-wide-gutter-width;
+                    line-height: $item-height * 2;
+                }
                 background: #66DD66;
                 color: darken(#66DD66, 20%);
             }
 
-            line-height: $item-height * 2;
+
         }
 
     }
