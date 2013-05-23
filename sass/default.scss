@@ -61,8 +61,59 @@ input {
     @include grid-container;
 
     @include bp(4) {
-        width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
         height: $item-height * 2 + $grid-wide-gutter-width * 2;
+
+        &.items-6 {
+            $rolumns: 6;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-12 {
+            $rolumns: 9;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-18 {
+            $rolumns: 12;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-24 {
+            $rolumns: 15;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-30 {
+            $rolumns: 18;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-36 {
+            $rolumns: 21;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-42 {
+            $rolumns: 24;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-48 {
+            $rolumns: 27;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-54 {
+            $rolumns: 30;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+        &.items-60 {
+            $rolumns: 33;
+            width: ($rolumns - 1) * ($item-width + $grid-wide-gutter-width);
+        }
+
+
     }
 }
 

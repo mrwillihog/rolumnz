@@ -199,4 +199,11 @@ function redraw() {
 
 redraw();
 
-$('#curated-rolumn, #popular-rolumn, #featured-items').on('change', redraw);
+$('#featured-items').on('change', function () {
+    $(".grid-container").removeClass (function (index, css) {
+        return (css.match (/\bitems-\S+/g) || []).join(' ');
+    }).addClass('items-'+$(this).val());
+    redraw();
+});
+
+$('#curated-rolumn, #popular-rolumn').on('change', redraw);
