@@ -2,13 +2,13 @@
  *  Generated grid mixins
  *  These can be generate by running the _grid.rb script
  **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000310}}
 body {
   font-family: 'Helvetica Neue';
   color: #666;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000316}}
 .header h1 {
   margin: 0;
   height: 157px;
@@ -21,143 +21,143 @@ body {
   margin-bottom: 16px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000329}}
 label {
   width: 120px;
   display: inline-block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000334}}
 input {
   padding: 4px 8px;
   margin-bottom: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000337}}
 input:last-child {
   margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000343}}
 .duplicatonz strong {
   font-size: 2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000349}}
 .main {
   overflow: hidden;
   margin: 0 auto;
   margin-left: 240px;
 }
 @media only screen and (min-width: 1008px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000349}}
   .main {
     width: 992px;
     overflow-x: scroll;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000359}}
 .grid-container {
   clear: left;
   margin: 0 -4px;
 }
 @media only screen and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000359}}
   .grid-container {
     margin: 0 -8px;
   }
 }
 @media only screen and (min-width: 1008px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000359}}
   .grid-container {
     height: 532px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000366}}
   .grid-container.items-6 {
     width: 1240px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000371}}
   .grid-container.items-12 {
     width: 1984px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000376}}
   .grid-container.items-18 {
     width: 2728px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000381}}
   .grid-container.items-24 {
     width: 3472px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000386}}
   .grid-container.items-30 {
     width: 4216px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000391}}
   .grid-container.items-36 {
     width: 4960px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\0000396}}
   .grid-container.items-42 {
     width: 5704px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003101}}
   .grid-container.items-48 {
     width: 6448px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003106}}
   .grid-container.items-54 {
     width: 7192px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003111}}
   .grid-container.items-60 {
     width: 7936px;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003120}}
 .grid-item {
   margin-bottom: 8px;
 }
 @media only screen and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003120}}
   .grid-item {
     margin-bottom: 16px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003125}}
 .grid-item.double {
   clear: left;
 }
 @media only screen and (min-width: 1008px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003125}}
   .grid-item.double {
     clear: none;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003131}}
 .grid-item.double .content a {
   background: #66DD66;
   color: #28b528;
 }
 @media only screen and (min-width: 1008px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003131}}
   .grid-item.double .content a {
     height: 516px;
     line-height: 500px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003147}}
 .grid-item.popular .content a {
   background: #6666DD;
   color: #2828b5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003154}}
 .grid-item .content {
   font-size: 4em;
   line-height: 250px;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003155}}
 .grid-item .content a {
   height: 250px;
   background: #BBB;
@@ -171,13 +171,13 @@ input:last-child {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003169}}
 .grid-item .content a:hover, .grid-item .content a:focus, .grid-item .content a:active {
   background: #EEBBEE;
   color: #da69da;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003180}}
 .controls {
   float: left;
   position: fixed;
@@ -186,7 +186,7 @@ input:last-child {
 }
 
 @media only screen and (max-width: 599px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003188}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003188}}
   .odd {
     clear: left;
     box-sizing: border-box;
@@ -199,7 +199,7 @@ input:last-child {
     margin-right: -50.0%;
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003193}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003193}}
   .even {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -211,27 +211,27 @@ input:last-child {
     margin-right: -100.0%;
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003197}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003197}}
   .show-in-three {
     display: none;
   }
 }
 @media only screen and (max-width: 599px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003188}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003188}}
   .odd {
     padding: 0 8px;
   }
 }
 
 @media only screen and (max-width: 599px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003193}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003193}}
   .even {
     padding: 0 8px;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1007px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003203}}
   .left {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -244,7 +244,7 @@ input:last-child {
     float: left;
     clear: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003208}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003208}}
   .middle {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -256,7 +256,7 @@ input:last-child {
     margin-right: -66.66666%;
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003212}}
   .right {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -268,47 +268,47 @@ input:last-child {
     margin-right: -100.0%;
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003216}}
   .hide-in-three {
     display: none;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1007px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003203}}
   .left {
     padding: 0 8px;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1007px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003208}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003208}}
   .middle {
     padding: 0 8px;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1007px) and (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003212}}
   .right {
     padding: 0 8px;
   }
 }
 
 @media only screen and (min-width: 1008px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003222}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003222}}
   .grid-item {
     float: left;
     width: 232px;
     margin-right: 16px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003227}}
   .grid-item.even {
     position: relative;
     margin-left: -248px;
     top: 266px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/willim83\/dev\/scratch\/rolumnz\/sass\/default\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/williamw\/Dropbox\/dev\/rolumnz\/sass\/default\.scss}line{font-family:\00003234}}
   .show-in-three {
     display: none;
   }
