@@ -115,11 +115,9 @@ function redraw() {
         itemNumber = 1,
         duplicates = [], // An array of items that need rendering at the next suitable opportunity
         duplicatesRequired,
-        nextItem = null; // Override the default item - used when pulling an item up a rolumn
+        cachedItem = null; // Override the default item - used when pulling an item up a rolumn
 
     $grid.empty();
-    // Calculate width
-    // $grid.css('width', (((objects.length + 2) / 2) * 248));
 
     for (var i = 0; i < objects.length; i++) {
         if (objectIsSingle(objects[i])) {
@@ -128,7 +126,7 @@ function redraw() {
                 if (duplicatesRequired == 1) {
                     $grid.append(buildFeaturedItem(itemNumber));
                     $grid.append(buildFeaturedItem(itemNumber+1, "show-in-three"));
-                    nextItem = buildFeaturedItem(itemNumber+1, "hide-in-three");
+                    cachedItem = buildFeaturedItem(itemNumber+1, "hide-in-three");
                 } else if (duplicatesRequired == 2) {
                     $grid.append(buildFeaturedItem(itemNumber, "hide-in-three"));
                     duplicates.push(buildFeaturedItem(itemNumber, "show-in-three"));
@@ -136,9 +134,9 @@ function redraw() {
                     $grid.append(buildFeaturedItem(itemNumber));
                 }
             } else {
-                if (nextItem !== null) {
-                    $grid.append(nextItem);
-                    nextItem = null;
+                if (cachedItem !== null) {
+                    $grid.append(cachedItem);
+                    cachedItem = null;
                 } else {
                     $grid.append(buildFeaturedItem(itemNumber));
                 }
