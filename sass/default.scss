@@ -26,6 +26,11 @@ body {
     }
 }
 
+label {
+    width: 120px;
+    display: inline-block;
+}
+
 input {
     padding: 4px 8px;
     margin-bottom: 20px;
@@ -123,7 +128,7 @@ input {
         @include grid-item-12-13;
     }
 
-    .after-duplicate {
+    .show-in-three {
         display: none;
     }
 }
@@ -142,7 +147,7 @@ input {
         @include grid-item-8-17;
     }
 
-    .before-duplicate {
+    .hide-in-three {
         display: none;
     }
 }
@@ -160,7 +165,7 @@ input {
         }
     }
 
-    .after-duplicate {
+    .show-in-three {
         display: none;
     }
 }

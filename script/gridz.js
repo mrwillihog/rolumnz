@@ -59,7 +59,7 @@ function buildObjectArray() {
     var objects = [],
         popular = +$('#popular-rolumn').val(),
         curated = +$('#curated-rolumn').val(),
-        numFeaturedItems = 18,
+        numFeaturedItems = +$('#featured-items').val(),
         popularIndex,
         curatedIndex;
 
@@ -75,8 +75,6 @@ function buildObjectArray() {
     } else {
         popularIndex -= 1;
     }
-
-    console.log(popularIndex, curatedIndex);
 
     for (var i = 0; i < numFeaturedItems; i++) {
         objects[i] = {
@@ -95,26 +93,67 @@ function buildObjectArray() {
     return objects;
 }
 
+function objectIsDouble(object) {
+    if (object && object.type == "double") {
+        return true;
+    }
+
+    return false;
+}
+
+function objectIsSingle(object) {
+    if (object && object.type == "single") {
+        return true;
+    }
+
+    return false;
+}
+
 function redraw() {
     var $grid = $('.grid-container'),
         objects = buildObjectArray(),
-        itemNumber = 1;
+        itemNumber = 1,
+        duplicates = [], // An array of items that need rendering at the next suitable opportunity
+        duplicatesRequired,
+        nextItem = null; // Override the default item - used when pulling an item up a rolumn
 
     $grid.empty();
-
-    console.log(objects);
+    // Calculate width
+    // $grid.css('width', (((objects.length + 2) / 2) * 248));
 
     for (var i = 0; i < objects.length; i++) {
-        if (objects[i].type == "single" ) {
-            $grid.append(buildFeaturedItem(itemNumber));
+        if (objectIsSingle(objects[i])) {
+            if (objectIsDouble(objects[i+1])) {
+                duplicatesRequired = 3 - itemNumber % 3;
+                if (duplicatesRequired == 1) {
+                    $grid.append(buildFeaturedItem(itemNumber));
+                    $grid.append(buildFeaturedItem(itemNumber+1, "show-in-three"));
+                    nextItem = buildFeaturedItem(itemNumber+1, "hide-in-three");
+                } else if (duplicatesRequired == 2) {
+                    $grid.append(buildFeaturedItem(itemNumber, "hide-in-three"));
+                    duplicates.push(buildFeaturedItem(itemNumber, "show-in-three"));
+                } else {
+                    $grid.append(buildFeaturedItem(itemNumber));
+                }
+            } else {
+                if (nextItem !== null) {
+                    $grid.append(nextItem);
+                    nextItem = null;
+                } else {
+                    $grid.append(buildFeaturedItem(itemNumber));
+                }
+            }
             itemNumber += 1;
         } else {
             $grid.append(buildCollectionItem(objects[i]['class']));
+            if (duplicates.length > 0 && objectIsSingle(objects[i+1])) {
+                $grid.append(duplicates[0]);
+                duplicates = [];
+            }
         }
     }
 }
 
 redraw();
 
-$('#curated-rolumn').on('change', redraw);
-$('#popular-rolumn').on('change', redraw);
+$('#curated-rolumn, #popular-rolumn, #featured-items').on('change', redraw);
