@@ -55,6 +55,19 @@ function buildCollectionItem(groupClass) {
     return $container;
 }
 
+function singleItem() {
+    return {
+        type: "single"
+    };
+}
+
+function doubleItem(type) {
+    return {
+        'type': "double",
+        'class': type
+    };
+}
+
 function buildObjectArray() {
     var objects = [],
         popular = +$('#popular-rolumn').val(),
@@ -77,18 +90,22 @@ function buildObjectArray() {
     }
 
     for (var i = 0; i < numFeaturedItems; i++) {
-        objects[i] = {
-            type: "single"
-        };
-        if (popularIndex - 1 == i || curatedIndex - 1 == i) {
-            objects[i].type = "double";
-            if (popularIndex - 1 == i) {
-                objects[i]['class'] = "popular";
-            } else {
-                objects[i]['class'] = "curated";
-            }
+        objects[i] = singleItem();
+        if (popularIndex - 1 == i) {
+            objects[i] = doubleItem("popular");
+            numFeaturedItems += 1;
+        } else if (curatedIndex - 1 == i) {
+            objects[i] = doubleItem("curated");
             numFeaturedItems += 1;
         }
+    }
+
+    // If there is a double height item at the end then add it now
+    if (popularIndex > numFeaturedItems) {
+        objects[objects.length] = doubleItem("popular");
+    }
+    if (curatedIndex > numFeaturedItems) {
+        objects[objects.length] = doubleItem("curated");
     }
     return objects;
 }
@@ -109,47 +126,75 @@ function objectIsSingle(object) {
     return false;
 }
 
+function updateDuplicateCount () {
+    var $count = $('.duplicatonz strong'),
+        $duplicates = $('.show-in-three');
+
+    $count.text($duplicates.length);
+}
+
 function redraw() {
     var $grid = $('.grid-container'),
         objects = buildObjectArray(),
         itemNumber = 1,
-        duplicates = [], // An array of items that need rendering at the next suitable opportunity
         duplicatesRequired,
-        cachedItem = null; // Override the default item - used when pulling an item up a rolumn
+        pushedItem = null, // An item that needs to be pushed down a row
+        pulledItem = null; // An item that needs to be pulled up a row
 
     $grid.empty();
 
     for (var i = 0; i < objects.length; i++) {
-        if (objectIsSingle(objects[i])) {
-            if (objectIsDouble(objects[i+1])) {
-                duplicatesRequired = 3 - itemNumber % 3;
-                if (duplicatesRequired == 1) {
-                    $grid.append(buildFeaturedItem(itemNumber));
-                    $grid.append(buildFeaturedItem(itemNumber+1, "show-in-three"));
-                    cachedItem = buildFeaturedItem(itemNumber+1, "hide-in-three");
-                } else if (duplicatesRequired == 2) {
-                    $grid.append(buildFeaturedItem(itemNumber, "hide-in-three"));
-                    duplicates.push(buildFeaturedItem(itemNumber, "show-in-three"));
-                } else {
-                    $grid.append(buildFeaturedItem(itemNumber));
-                }
+
+        // Last item before a double item - handle duplication here.
+        if (objectIsSingle(objects[i]) && objectIsDouble(objects[i+1])) {
+            duplicatesRequired = 3 - itemNumber % 3;
+            if (duplicatesRequired == 1) {
+                // Pull an item up a row in Group 3
+                // Append this item as normal
+                $grid.append(buildFeaturedItem(itemNumber));
+                // Append the next item to show in group 3 (hidden in other groups)
+                $grid.append(buildFeaturedItem(itemNumber+1, "show-in-three"));
+                // Store the next item to hide in group 3 but show in other groups. This is rendered in the next iteration of the loop
+                pulledItem = buildFeaturedItem(itemNumber+1, "hide-in-three");
+            } else if (duplicatesRequired == 2) {
+                // Push an item down a row in Group 3
+                // Append the item tagged as hide in group 3
+                $grid.append(buildFeaturedItem(itemNumber, "hide-in-three"));
+                // Add a duplicate that is shown in group 3, to be inserted at the next available opportunity.
+                pushedItem = buildFeaturedItem(itemNumber, "show-in-three");
             } else {
-                if (cachedItem !== null) {
-                    $grid.append(cachedItem);
-                    cachedItem = null;
-                } else {
-                    $grid.append(buildFeaturedItem(itemNumber));
-                }
+                // No duplicates required, carry on as normal
+                $grid.append(buildFeaturedItem(itemNumber));
             }
+            // Item added, increase the counter
             itemNumber += 1;
-        } else {
+        // Item is a single item not proceeded by a double item
+        } else if (objectIsSingle(objects[i]) && !objectIsDouble(objects[i+1])) {
+            // If we have an item cached - use that instead
+            if (pulledItem !== null) {
+                $grid.append(pulledItem);
+                // Reset the cached item
+                pulledItem = null;
+            } else {
+                // Happy path - single item with no cache.
+                $grid.append(buildFeaturedItem(itemNumber));
+            }
+            // Item added, increase counter
+            itemNumber += 1;
+        // Item is a double height item
+        } else if (objectIsDouble(objects[i])) {
             $grid.append(buildCollectionItem(objects[i]['class']));
-            if (duplicates.length > 0 && objectIsSingle(objects[i+1])) {
-                $grid.append(duplicates[0]);
-                duplicates = [];
+            // If we have an item to be pushed down and the next item isnt another double height item
+            if (pushedItem && objectIsSingle(objects[i+1])) {
+                // Add the duplicate
+                $grid.append(pushedItem);
+                // Reset the duplicate
+                pushedItem = null;
             }
         }
     }
+
+    updateDuplicateCount();
 }
 
 redraw();
